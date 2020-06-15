@@ -2,7 +2,7 @@
 
 ## mqtt-react-hooks
 
-[![CircleCI](https://circleci.com/gh/almond-hydroponics/almond-re.svg?style=svg)](https://circleci.com/gh/almond-hydroponics/almond-re)
+[![CircleCI](https://circleci.com/gh/almond-hydroponics/mqtt-hooks.svg?style=svg)](https://circleci.com/gh/almond-hydroponics/mqtt-hooks)
 [![Maintainability](https://api.codeclimate.com/v1/badges/211bd4e833103573e2d1/maintainability)](https://codeclimate.com/github/almond-hydroponics/mqtt-hooks/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/211bd4e833103573e2d1/test_coverage)](https://codeclimate.com/github/almond-hydroponics/mqtt-hooks/test_coverage)
 
