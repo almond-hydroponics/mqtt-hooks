@@ -14,10 +14,11 @@ module.exports = {
       statements: 0,
     },
   },
+  preset: 'ts-jest',
   testMatch: ['**/__tests__/**/*.spec.+(ts|tsx|js)'],
   setupFilesAfterEnv: [
     resolve('./tests/setupTest.tsx'),
-    resolve('./lib/setupEnzyme.ts')
+    resolve('./lib/setupEnzyme.ts'),
   ],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',

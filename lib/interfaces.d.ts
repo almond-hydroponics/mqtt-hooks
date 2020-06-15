@@ -1,5 +1,5 @@
-import * as React from "react";
-import { IClientOptions } from "mqtt";
+import * as React from 'react';
+import { IClientOptions } from 'mqtt';
 
 export interface ConnectorProps {
   brokerUrl: string | object;

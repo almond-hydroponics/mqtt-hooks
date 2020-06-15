@@ -9,7 +9,7 @@
     "dist"
   ],
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [
     "mqtt",
@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/victorHAS/mqtt-react-hooks.git"
+    "url": "git+https://github.com/almond-hydroponics/mqtt-hooks.git"
   },
   "homepage": "https://github.com/almond-hydroponics/mqtt-hooks#readme",
   "author": "Francis Masha <francismasha96@gmail.com>",
@@ -88,6 +88,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.2",
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-typescript2": "^0.27.1",
+    "sinon": "^9.0.2",
     "ts-jest": "^26.1.0",
     "typescript": "^3.9.5",
     "yup": "^0.28.1"

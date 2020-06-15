@@ -1,27 +1,25 @@
-import * as React from "react";
-import MQTTPattern from "mqtt-pattern";
-import uuid from "uuid";
+import * as React from 'react';
+import MQTTPattern from 'mqtt-pattern';
 
-import MqttContext from "./Context";
-import { MqttContext as Context } from "./types";
+import MqttContext from './Context';
+import { MqttContext as Context } from './types';
 
-const useSubscription = <T>(topic: string) => {
+const useSubscription = (topic: string) => {
   const {
     mqtt,
     status,
-    messages,
-    addMessage,
-    lastMessage
-  } = React.useContext<Context<T>>(MqttContext);
+    message,
+    setMessage,
+  } = React.useContext<Context>(MqttContext);
 
   const subscribed = React.useMemo(() => mqtt?.subscribe(topic), [mqtt]);
 
   React.useEffect(() => {
     const getMessages = () => {
       subscribed?.once(
-        "message",
+        'message',
         (t: string, message: { toString: () => string }) => {
-          let subMessage;
+          let subMessage: string;
           try {
             subMessage = JSON.parse(message.toString());
           } catch (e) {
@@ -31,27 +29,21 @@ const useSubscription = <T>(topic: string) => {
           const packet = {
             message: subMessage,
             topic: t,
-            id: uuid.v4()
           };
 
-          if (MQTTPattern.matches(topic, t)) addMessage(packet);
-        }
+          if (MQTTPattern.matches(topic, t)) setMessage(packet);
+        },
       );
     };
 
     getMessages();
-  }, [subscribed, messages]);
-
-  const subMessages = messages.filter(message => MQTTPattern.matches(topic, message.topic));
-  const lastMessageOnTopic = subMessages[subMessages.length - 1];
+  }, [subscribed]);
 
   return {
-    subMessages,
     mqtt,
     status,
-    lastMessage,
-    lastMessageOnTopic,
-    topic
+    topic,
+    message,
   };
 };
 
