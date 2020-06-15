@@ -14,7 +14,7 @@ export interface MessageStructure {
 
 export interface Message<T> {
   topic: string;
-  message: T | MessageStructure;
+  message?: T | MessageStructure;
   id: string;
 }
 
