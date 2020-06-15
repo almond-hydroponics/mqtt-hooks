@@ -1,5 +1,5 @@
 {
-  "name": "@almond-hydroponics/mqtt-hooks",
+  "name": "mqtt-hooks",
   "version": "1.0.1",
   "description": "ReactJS library for Pub/Sub communication with an MQTT broker using Hooks",
   "main": "dist/index.js",
@@ -9,7 +9,6 @@
     "dist"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/",
     "access": "public"
   },
   "keywords": [
