@@ -1,6 +1,7 @@
 const { resolve } = require('path');
 
 module.exports = {
+  verbose: true,
   bail: true,
   clearMocks: true,
   collectCoverage: true,

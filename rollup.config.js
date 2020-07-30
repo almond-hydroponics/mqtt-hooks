@@ -56,7 +56,7 @@ export default {
       },
       rollupCommonJSResolveHack: true,
       useTsconfigDeclarationDir: true,
-      objectHashIgnoreUnknownHack: true,
+      objectHashIgnoreUnknownHack: false,
     }),
     commonjs(),
     terser(),

@@ -5,7 +5,7 @@ import { Connector } from '../index';
 
 describe('Connector', () => {
   const div_id = 'content';
-  test('should render children', () => {
+  it('should render children', () => {
     const mockMqtt = new EventEmitter();
     const mounted = shallow(
       <Connector brokerUrl={mockMqtt}>

@@ -1,3 +1,5 @@
+const { resolve } = require('path');
+
 module.exports = {
   env: {
     browser: true,
@@ -101,18 +103,18 @@ module.exports = {
     'import/no-named-as-default-member': 0,
     'import/namespace': 0,
     'import/named': 0,
-    'import-helpers/order-imports': [
-      'warn',
-      {
-        'newlines-between': 'always',
-        groups: [
-          '/^react/',
-          ['builtin', 'external', 'internal'],
-          ['parent', 'sibling', 'index'],
-        ],
-        alphabetize: { order: 'asc', ignoreCase: true },
-      },
-    ],
+    // 'import-helpers/order-imports': [
+    //   'warn',
+    //   {
+    //     'newlines-between': 'always',
+    //     groups: [
+    //       '/^react/',
+    //       ['builtin', 'external', 'internal'],
+    //       ['parent', 'sibling', 'index'],
+    //     ],
+    //     alphabetize: { order: 'asc', ignoreCase: true },
+    //   },
+    // ],
     'import/no-dynamic-require': 'off',
 
     'jsx-a11y/anchor-is-valid': 0,
@@ -137,7 +139,7 @@ module.exports = {
     // "react-hooks/exhaustive-deps": 1
   },
   settings: {
-    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    // 'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
@@ -146,4 +148,3 @@ module.exports = {
     },
   },
 };
-
