@@ -2,7 +2,6 @@
 
 ## mqtt-react-hooks
 
-![CI](https://github.com/almond-hydroponics/mqtt-hooks/workflows/CI/badge.svg)
 [![CircleCI](https://circleci.com/gh/almond-hydroponics/mqtt-hooks.svg?style=svg)](https://circleci.com/gh/almond-hydroponics/mqtt-hooks)
 [![Maintainability](https://api.codeclimate.com/v1/badges/211bd4e833103573e2d1/maintainability)](https://codeclimate.com/github/almond-hydroponics/mqtt-hooks/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/211bd4e833103573e2d1/test_coverage)](https://codeclimate.com/github/almond-hydroponics/mqtt-hooks/test_coverage)
@@ -14,7 +13,7 @@
 
     Pub/Sub communication with an MQTT broker using React Hooks
 
-  [![Almond](../public/readme.svg)](https://almond-re-staging.herokuapp.com/)
+  [![Almond](./public/readme.svg)](https://almond-re-staging.herokuapp.com/)
 
   #### Simple but complicated mqtt hook
 
@@ -30,8 +29,8 @@ The library is a modification of mqtt-react-hooks found [here](https://github.co
 3. React's state is updated, and the data is passed down to stateless components
 
 ## Hooks Available
-- useMqttState -> return { status, mqtt, allMessages, lastMessage }
-- useSubscription(topic) -> return { msgs, mqtt, status, lastMessage, lastMessageOnTopic }
+- useMqttState -> return { status, mqtt }
+- useSubscription(topic) -> return { mqtt, status, lastMessage }
 
 ### Usage
 Currently, mqtt-react-hooks exports one enhancers.

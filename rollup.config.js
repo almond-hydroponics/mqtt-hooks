@@ -2,7 +2,7 @@ import path from 'path';
 import babel from 'rollup-plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
-import {terser} from 'rollup-plugin-terser';
+import { terser } from 'rollup-plugin-terser';
 import typescript from 'rollup-plugin-typescript2';
 import url from '@rollup/plugin-url';
 
@@ -52,11 +52,12 @@ export default {
           declarationDir: path.resolve(PACKAGE_ROOT_PATH, './typings'),
           declarationMap: true,
         },
-        include: [path.resolve(PACKAGE_ROOT_PATH, './lib/**/*')],
+        include: [path.resolve(PACKAGE_ROOT_PATH, './lib')],
+        project: resolve(__dirname, 'tsconfig.json'),
       },
       rollupCommonJSResolveHack: true,
       useTsconfigDeclarationDir: true,
-      objectHashIgnoreUnknownHack: false,
+      objectHashIgnoreUnknownHack: true,
     }),
     commonjs(),
     terser(),
