@@ -1,6 +1,6 @@
 {
   "name": "mqtt-hooks",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "ReactJS library for Pub/Sub communication with an MQTT broker using Hooks",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -46,8 +46,8 @@
     "duplexify": "^4.1.1",
     "mqtt": "4.1.0",
     "mqtt-pattern": "^1.2.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "17.0.0-rc.1",
+    "react-dom": "17.0.0-rc.1"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

@@ -12,7 +12,7 @@ let wrapper: ({ children }: { children: any; }) => JSX.Element;
 describe('useSubscription', () => {
   beforeAll(() => {
     wrapper = ({ children }) => (
-      <Connector brokerUrl={URL} options={options}>
+      <Connector brokerUrl={URL} opts={options}>
         {children}
       </Connector>
     );

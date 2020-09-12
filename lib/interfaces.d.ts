@@ -1,8 +1,8 @@
-import React from 'react';
+import { ReactNode } from 'react';
 import { IClientOptions } from 'mqtt';
 
 export interface ConnectorProps {
   brokerUrl?: string | object;
-  children: React.ReactNode;
-  options?: IClientOptions | undefined;
+  children: ReactNode;
+  opts?: IClientOptions | undefined;
 }

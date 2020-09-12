@@ -4,20 +4,20 @@ import { connect, MqttClient } from 'mqtt';
 import MqttContext from './Context';
 import { ConnectorProps } from './interfaces';
 
-const Connector = ({ brokerUrl, children, options = {} }: ConnectorProps) => {
+const Connector = ({ brokerUrl, children, opts = {} }: ConnectorProps) => {
   const [status, setStatus] = useState<string>('offline');
   const [mqtt, setMqtt] = useState<MqttClient>();
 
   useEffect(() => {
-    const mqttInstance = connect(brokerUrl, options);
-    setMqtt(mqttInstance);
-    mqttInstance.on('connect', () => setStatus('connected'));
-    mqttInstance.on('reconnect', () => setStatus('reconnecting'));
-    mqttInstance.on('close', () => setStatus('closed'));
-    mqttInstance.on('error', error => setStatus(error.message));
+    const client = connect(brokerUrl, opts);
+    setMqtt(client);
+    client.on('connect', () => setStatus('connected'));
+    client.on('reconnect', () => setStatus('reconnecting'));
+    client.on('close', () => setStatus('closed'));
+    client.on('error', error => setStatus(error.message));
 
     return () => {
-      mqttInstance.end();
+      client.end();
     };
   }, [brokerUrl]);
 

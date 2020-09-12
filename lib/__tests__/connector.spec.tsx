@@ -10,7 +10,7 @@ let wrapper: ({ children }: { children: any; }) => JSX.Element;
 describe('Connector wrapper', () => {
   beforeAll(() => {
     wrapper = ({ children }) => (
-      <Connector brokerUrl={URL} options={options}>
+      <Connector brokerUrl={URL} opts={options}>
         {children}
       </Connector>
     );
@@ -46,7 +46,7 @@ describe('Connector wrapper', () => {
   it('should connect with passing props', async () => {
     const { result, waitFor } = renderHook(() => useMqttState(), {
       wrapper: ({ children }) => (
-        <Connector brokerUrl={URL} options={{ keepalive: 0 }}>
+        <Connector brokerUrl={URL} opts={{ keepalive: 0 }}>
           {children}
         </Connector>
       ),
