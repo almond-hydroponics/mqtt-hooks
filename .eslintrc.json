@@ -1,0 +1,107 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 2020,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true,
+			"tsx": true
+		}
+	},
+	"settings": {
+		"react": {
+			"pragma": "React",
+			"version": "detect"
+		}
+	},
+	"extends": [
+		"airbnb",
+		"eslint:recommended",
+		"plugin:import/recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended",
+		"prettier",
+		"prettier/@typescript-eslint"
+	],
+	"plugins": [
+		"@typescript-eslint",
+		"import",
+		"import-helpers",
+		"react-hooks",
+		"jest",
+		"prettier",
+		"react",
+		"testing-library"
+	],
+	"env": {
+		"browser": true,
+		"jasmine": true,
+		"jest": true,
+		"es6": true,
+		"node": true
+	},
+	"rules": {
+		"import/extensions": [
+			"off",
+			"ignorePackages",
+			{
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never"
+			}
+		],
+		"react/jsx-wrap-multilines": "off",
+		"import/no-unresolved": "off",
+		"import/no-extraneous-dependencies": [
+			"error",
+			{
+				"devDependencies": [
+					"**/*.test.ts",
+					"**/*.test.tsx",
+					"tests/setupTest.js",
+					"config/**/*",
+          "rollup.config.js"
+				]
+			}
+		],
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		],
+		"react/state-in-constructor": "off",
+		"react/jsx-curly-newline": "off",
+		"no-prototype-builtins": "off",
+		"@typescript-eslint/ban-ts-ignore": "off",
+		"react/jsx-props-no-spreading": "off",
+		"no-nested-ternary": "off",
+		"no-console": 2,
+		"no-underscore-dangle": "off",
+		"prettier/prettier": [
+			"error",
+			{
+				"singleQuote": true
+			}
+		],
+		"@typescript-eslint/explicit-member-accessibility": 0,
+		"@typescript-eslint/explicit-function-return-type": 0,
+		"@typescript-eslint/no-use-before-define": 0,
+		"react/jsx-one-expression-per-line": "off",
+		"react/jsx-indent": "off",
+		"react/jsx-indent-props": "off",
+		"no-use-before-define": "off",
+		"react/require-default-props": "off"
+	},
+	"globals": {
+		"window": true,
+		"document": true,
+		"localStorage": true,
+		"FormData": true,
+		"FileReader": true,
+		"Blob": true,
+		"navigator": true
+	}
+}

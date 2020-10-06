@@ -1,4 +1,4 @@
 declare module 'mqtt-pattern' {
-  const value: any;
-  export = value;
+	const value: any;
+	export = value;
 }
