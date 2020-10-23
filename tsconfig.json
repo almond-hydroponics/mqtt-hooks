@@ -73,8 +73,9 @@
 		/* Advanced Options */
 		"skipLibCheck": true /* Skip type checking of declaration files. */,
 		"forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
-		"suppressImplicitAnyIndexErrors": true
-	},
+		"suppressImplicitAnyIndexErrors": true,
+    "allowUmdGlobalAccess": true
+  },
 	"include": ["lib"],
 	"exclude": ["node_modules", "build", "dist", "example"]
 }

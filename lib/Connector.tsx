@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { connect, MqttClient } from 'mqtt';
 
 import MqttContext from './Context';

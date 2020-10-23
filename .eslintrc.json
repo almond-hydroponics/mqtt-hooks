@@ -62,7 +62,7 @@
 					"**/*.test.tsx",
 					"tests/setupTest.js",
 					"config/**/*",
-          "rollup.config.js"
+					"rollup.config.js"
 				]
 			}
 		],
@@ -93,7 +93,9 @@
 		"react/jsx-indent": "off",
 		"react/jsx-indent-props": "off",
 		"no-use-before-define": "off",
-		"react/require-default-props": "off"
+		"react/require-default-props": "off",
+		"react/jsx-uses-react": "off",
+		"react/react-in-jsx-scope": "off"
 	},
 	"globals": {
 		"window": true,

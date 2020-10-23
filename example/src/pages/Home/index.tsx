@@ -1,8 +1,3 @@
-import React from 'react';
-// import { Button } from 'antd';
-//
-// import styles from './Home.module.less'
-
 import { Connector } from '../../../../lib';
 import Status from '../Status';
 

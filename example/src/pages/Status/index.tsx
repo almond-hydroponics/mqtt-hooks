@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useSubscription, useMqttState } from 'mqtt-hooks';
 
 const Status = () => {
