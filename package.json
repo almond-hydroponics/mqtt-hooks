@@ -46,7 +46,7 @@
     "prettier": "prettier  --single-quote --write \"*/**/*.{ts, js, tsx}\""
   },
   "dependencies": {
-    "duplexify": "^4.1.1",
+    "duplexify": "^4.1.2",
     "mqtt": "4.2.1",
     "mqtt-pattern": "^1.2.0",
     "np": "^6.5.0",
